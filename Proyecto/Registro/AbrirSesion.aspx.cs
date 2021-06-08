@@ -4,17 +4,20 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using BC = BCrypt.Net.BCrypt;
 
 namespace Proyecto.Registro
+
 {
-    public partial class Login : System.Web.UI.Page
+    public partial class AbrirSesion : System.Web.UI.Page
     {
-        static List<Registrar> usuarios = new List<Registrar>();
+        static List<claseRegistrar> usuarios = new List<claseRegistrar>();
         protected void Page_Load(object sender, EventArgs e)
         {
-            string archivo = Server.MapPath("../Json_Registro.json");
+            string archivo = Server.MapPath("../Registro.json");
             if (File.Exists(archivo))
             {
                 StreamReader jsonStream = File.OpenText(archivo);
@@ -23,14 +26,14 @@ namespace Proyecto.Registro
 
                 jsonStream.Close();
 
-                usuarios = JsonConvert.DeserializeObject<List<Registrar>>(json);
+                usuarios = JsonConvert.DeserializeObject<List<claseRegistrar>>(json);
             }
         }
 
 
         protected void Login1_Authenticate1(object sender, AuthenticateEventArgs e)
         {
-            Registrar usuario = new Registrar();
+            claseRegistrar usuario = new claseRegistrar();
 
             usuario = usuarios.Find(u => u.Nombre_res == Login1.UserName);
 
@@ -59,13 +62,13 @@ namespace Proyecto.Registro
                 strRedirect = Request["ReturnUrl"];
                 if (strRedirect == null)
                     if (usuario.Nivel_res == 1)
-                        strRedirect = "../P_Medico.aspx";
+                        strRedirect = "../Medico.aspx";
                 if (usuario.Nivel_res == 2)
-                    strRedirect = "../P_Secretaria.aspx";
+                    strRedirect = "../Secretaria.aspx";
                 Response.Redirect(strRedirect, true);
             }
             else
-                Response.Redirect("Login.aspx", true);
+                Response.Redirect("AbrirSesion.aspx", true);
         }
     }
 }
