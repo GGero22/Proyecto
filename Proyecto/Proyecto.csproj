@@ -106,6 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Cita.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -124,7 +125,15 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Cita.json" />
+    <Content Include="Medico.aspx" />
+    <Content Include="Paciente.aspx" />
+    <Content Include="Paciente.json" />
+    <Content Include="Registrar.aspx" />
+    <Content Include="Registro.json" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Registro\AbrirSesion.aspx" />
+    <Content Include="Registro\CerrarSesion.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -153,6 +162,7 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Secretaria.aspx" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -169,6 +179,13 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Cita.aspx.cs">
+      <DependentUpon>Cita.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cita.aspx.designer.cs">
+      <DependentUpon>Cita.aspx</DependentUpon>
+    </Compile>
     <Compile Include="claseCitas.cs" />
     <Compile Include="clasePaciente.cs" />
     <Compile Include="claseRegistrar.cs" />
@@ -189,7 +206,49 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Medico.aspx.cs">
+      <DependentUpon>Medico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Medico.aspx.designer.cs">
+      <DependentUpon>Medico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paciente.aspx.cs">
+      <DependentUpon>Paciente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paciente.aspx.designer.cs">
+      <DependentUpon>Paciente.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registrar.aspx.cs">
+      <DependentUpon>Registrar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registrar.aspx.designer.cs">
+      <DependentUpon>Registrar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registro\AbrirSesion.aspx.cs">
+      <DependentUpon>AbrirSesion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registro\AbrirSesion.aspx.designer.cs">
+      <DependentUpon>AbrirSesion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registro\CerrarSesion.aspx.cs">
+      <DependentUpon>CerrarSesion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registro\CerrarSesion.aspx.designer.cs">
+      <DependentUpon>CerrarSesion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secretaria.aspx.cs">
+      <DependentUpon>Secretaria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Secretaria.aspx.designer.cs">
+      <DependentUpon>Secretaria.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

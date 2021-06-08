@@ -54,6 +54,12 @@
                         <li><a runat="server" href="~/">Inicio</a></li>
                         <li><a runat="server" href="~/About">Acerca de</a></li>
                         <li><a runat="server" href="~/Contact">Contacto</a></li>
+                        <li><a runat="server" href="~/Medico">Medico</a></li>
+                        <li><a runat="server" href="~/Registrar">Registrate</a></li>
+                        <li><a runat="server" href="~/Secretaria">Secretaria</a></li>
+                                <li><a runat="server" href="~/AbrirSesion/CerrarSesion">Salir</a></li>
+
+
                     </ul>
                 </div>
             </div>
